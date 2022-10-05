@@ -40,7 +40,7 @@ if [[ -f "$GAME_CONFIG_FILE" ]]; then
 fi
 
 # Copy our local config into place
-if [[ ! -f "$LOCAL_PATH/$CONFIG_FILE" ]]; then
+if [[ -f "$LOCAL_PATH/$CONFIG_FILE" ]]; then
   cp -v "$LOCAL_PATH/$CONFIG_FILE" "$GAME_CONFIG_FILE" >>"$LOG_FILE" 2>&1
 fi
 
