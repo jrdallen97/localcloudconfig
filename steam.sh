@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-LOCAL_PATH="$HOME/localcloudconfig/local_configs/$SteamAppId"
-BACKUP_PATH="$HOME/localcloudconfig/backup_configs/$SteamAppId"
-LOG_DIR="$HOME/localcloudconfig/log"
+REPO_DIR=$(cd "$(dirname "$0")" && pwd)
+LOCAL_PATH="$REPO_DIR/local_configs/$SteamAppId"
+BACKUP_PATH="$REPO_DIR/backup_configs/$SteamAppId"
+LOG_DIR="$REPO_DIR/logs"
 LOG_FILE="$LOG_DIR/$SteamAppId"
 
 mkdir -p "$LOCAL_PATH"
 mkdir -p "$BACKUP_PATH"
-mkdir -p "$LOG_DIR"
 
+# Wipe log file before each launch
 echo "starting..." >"$LOG_FILE"
 
 case "$SteamAppId" in
