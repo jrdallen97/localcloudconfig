@@ -9,7 +9,8 @@ This script allows you to maintain a local version of your settings for specific
 Theoretically this script should work on any Linux machine (?), but I'll be assuming that you're installing it on a Steam Deck for simplicity.
 
 1. Download this repo to your deck (e.g. with `git clone`). I installed it to `/home/deck/localcloudconfig`.
-2. 
+2. In Steam, go to the game -> properties, and set the launch options to `/home/deck/localcloudconfig/steam.sh %command%`. This will make Steam run the script instead of starting the game, but will pass the command used to start the game into the script so that we can start it when we're ready.
+3. Start the game! :)
 
 ## Supported games
 
